@@ -55,17 +55,34 @@ nav {
     gap: 20px;
 }
 
-nav a {
+a {
     text-transform: uppercase;
 }
+a:link{
+    color: var(--primary-color);
+}
 
-nav a:hover {
-    text-transform: uppercase;
+a:visited {
+    color: var(--primary-color);
+}
+ a:hover {
+    color: var(--accent-color);
+}
+
+a:active {
     color: var(--accent-color);
 }
 
 .logo {
     width: 75px;
+}
+
+.menu-open,
+.menu-close {
+    display:none;
+    position: relative;
+    top: 45px;
+    left: 85%;
 }
 
 /* Main */
@@ -74,6 +91,7 @@ h1 {
     width: 100%;
     margin: 0 auto;
     padding-top: 3em;
+    text-transform: uppercase;
 }
 
 .card-container {
@@ -130,7 +148,7 @@ input {
     padding: 8px;
 }
 
-button {
+form button {
     font: inherit;
     background-color: var(--accent-color);
     color: var(--primary-color); 
@@ -207,16 +225,52 @@ button {
 
 
 @media (max-width: 419.98px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     nav {
         padding-right: 1em;
+        flex-direction: column;
+        padding: 20px 0 0 15px; 
     }
+
     h1 {
         font-size: 1.5em;
     }
+
     .icon {
         display: none;
+        font-size: 1.25em;
     }
+
     .card-info {
         min-height: 50%;
     }
+
+    .menu-open {
+        display: inline;
+        cursor: pointer;
+        font-size: 1.25em;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    /* Responsive Menu */
+
+    .show-nav-item {
+        display: inline;
+    }
+
+    .hide-menu-open {
+        display: none;
+    }
+    .show-menu-close {
+        display: inline;
+        font-size: 1.25em;
+    }
+
 }
