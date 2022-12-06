@@ -44,7 +44,7 @@ footer {
     justify-content: space-between;
     min-width: 100%;
     height: fit-content;
-    padding: 0 6em;
+    padding: 0 3em;
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
@@ -159,16 +159,7 @@ form button {
 
 /* Media Queries */
 
-@media (max-width: 1198.98px) {
-    .card-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-        padding: 6em;
-    }
-}
-
-@media (max-width: 991.98px) {
+@media (max-width: 1400px) {
     .card-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -176,6 +167,15 @@ form button {
         padding: 6em;
     }
 }
+
+/* @media (max-width: 991.98px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 6em;
+    }
+} */
 
 @media (max-width: 767.98px) {
     .card-container {
